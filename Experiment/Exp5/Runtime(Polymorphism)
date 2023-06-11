@@ -1,0 +1,27 @@
+using System;
+class Shape{
+ private double length;
+ private double width;
+ public double Length {
+ get { return length; }
+ set { length = value; }
+ }
+ public double Width {
+ get { return width; }
+ set { width = value; }
+ }
+ public double GetArea() {
+ return length * width;
+ }
+ public double GetArea(double radius) {
+ return Math.PI * radius * radius;
+ }}
+class Program{
+ static void Main(string[] args) {
+ Shape rect = new Shape();
+ rect.Length = 5;
+ rect.Width = 10;
+ Console.WriteLine("Rectangle area: {0}", rect.GetArea());
+ Shape circle = new Shape();
+ Console.WriteLine("Circle area: {0}", circle.GetArea(5));
+ }}

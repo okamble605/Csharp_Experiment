@@ -1,0 +1,32 @@
+using System;
+class Student
+{
+ private string name;
+ private int age;
+ public Student(string name)
+ {
+ this.name = name;
+ }
+ public string Name
+ {
+ get { return name; }
+ }
+ public int Age
+ {
+ set { age = value; }
+ }
+ public void Display()
+ {
+ Console.WriteLine("Name: {0}", Name);
+ Console.WriteLine("Age: {0}", age);
+ }
+}
+class Program
+{
+ static void Main(string[] args)
+ {
+ Student student = new Student("Omkar");
+ student.Age = 23;
+ student.Display();
+ }
+}

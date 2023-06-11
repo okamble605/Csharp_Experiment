@@ -1,0 +1,29 @@
+using System;
+class Rectangle {
+ private int length;
+ private int width;
+ public int Length {
+ get { return length; }
+ set { length = value; }
+ }
+ public int Width {
+ get { return width; }
+ set { width = value; }
+ }
+ public int CalculateArea() {
+ return length * width;
+ }
+ public int CalculateArea(int length, int width) {
+ return length * width;
+ } }
+class Program {
+ static void Main(string[] args) {
+ Rectangle rectangle = new Rectangle();
+ rectangle.Length = 5;
+ rectangle.Width = 10;
+ Console.WriteLine("Area with instance variables: {0}", rectangle.CalculateArea());
+ int length = 7;
+ int width = 8;
+ Console.WriteLine("Area with passed variables: {0}", rectangle.CalculateArea(length, width));
+ }
+}
